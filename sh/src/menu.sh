@@ -83,7 +83,7 @@ show_banner() {
     fi
 
     echo
-    _cyan "mihomo-ms  管理脚本 ${is_sh_ver}"
+    _cyan "mhs  管理脚本 ${is_sh_ver}"
     echo "$line"
 
     if [[ $w -ge 64 ]]; then

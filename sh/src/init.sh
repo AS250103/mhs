@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# mihomo-ms 初始化: 只定义变量和函数, 由入口脚本调用 main
+# mhs 初始化: 只定义变量和函数, 由入口脚本调用 main
 
 # bash fonts colors
 red='\e[31m'

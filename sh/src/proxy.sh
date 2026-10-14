@@ -25,7 +25,7 @@ write_proxy_file() {
     local port=$1 tmp
     tmp=$(mktemp "$(dirname "$is_proxy_file")/.mihomo-proxy.XXXXXX") || return 1
     if ! cat >"$tmp" <<EOF
-# mihomo 系统代理环境变量 - 由 mihomo-ms 生成
+# mihomo 系统代理环境变量 - 由 mhs 生成
 # 关闭: mihomo proxy off
 export http_proxy=http://127.0.0.1:$port
 export https_proxy=http://127.0.0.1:$port

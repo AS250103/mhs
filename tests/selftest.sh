@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# mihomo-ms 隔离自测: 全部在临时目录/模拟命令中执行, 不触碰真实服务与配置
+# mhs 隔离自测: 全部在临时目录/模拟命令中执行, 不触碰真实服务与配置
 # 用法: bash tests/selftest.sh
 
 project_dir=$(cd "$(dirname "$0")/.." && pwd)
-work=$(mktemp -d /tmp/mihomo-ms-selftest.XXXXXX) || exit 1
+work=$(mktemp -d /tmp/mhs-selftest.XXXXXX) || exit 1
 pass=0
 fail=0
 

@@ -2,11 +2,11 @@
 
 # ---------------- 下载 (核心与 Geo 数据) ----------------
 
-# 可选镜像前缀, 例如: MIHOMO_MS_MIRROR=https://ghfast.top/
+# 可选镜像前缀, 例如: MHS_MIRROR=https://ghfast.top/
 mirror_url() {
     local url=$1
-    if [[ $MIHOMO_MS_MIRROR && $url == https://github.com/* ]]; then
-        printf '%s%s\n' "${MIHOMO_MS_MIRROR%/}/" "$url"
+    if [[ $MHS_MIRROR && $url == https://github.com/* ]]; then
+        printf '%s%s\n' "${MHS_MIRROR%/}/" "$url"
     else
         printf '%s\n' "$url"
     fi
@@ -18,11 +18,11 @@ download_url() {
     local -a urls=()
     local p
 
-    if [[ $MIHOMO_MS_MIRROR ]]; then
+    if [[ $MHS_MIRROR ]]; then
         urls+=("$(mirror_url "$url")")
     fi
     urls+=("$url")
-    if [[ ! $MIHOMO_MS_MIRROR ]]; then
+    if [[ ! $MHS_MIRROR ]]; then
         for p in "https://ghfast.top/" "https://gh-proxy.com/"; do
             urls+=("${p}${url}")
         done

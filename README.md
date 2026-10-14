@@ -1,4 +1,4 @@
-# mihomo-ms
+# mhs
 
 mihomo (Clash.Meta) 一键安装管理脚本，用于本机系统代理。
 
@@ -7,7 +7,7 @@ mihomo (Clash.Meta) 一键安装管理脚本，用于本机系统代理。
 ## 安装
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/AS250103/mihomo-ms/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/AS250103/mhs/main/install.sh | bash
 ```
 
 本地源码安装:
@@ -24,15 +24,15 @@ bash install.sh
 
 ```bash
 # 只加速脚本代码包
-curl -fsSL https://ghfast.top/https://raw.githubusercontent.com/AS250103/mihomo-ms/main/install.sh | bash
+curl -fsSL https://ghfast.top/https://raw.githubusercontent.com/AS250103/mhs/main/install.sh | bash
 
 # 加速核心/数据下载
-MIHOMO_MS_MIRROR=https://ghfast.top \
-  curl -fsSL https://raw.githubusercontent.com/AS250103/mihomo-ms/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/AS250103/mhs/main/install.sh \
+  | MHS_MIRROR=https://ghfast.top bash
 ```
 
-- `MIHOMO_MS_REPO`：脚本代码仓库地址（默认 `https://github.com/AS250103/mihomo-ms`）。
-- `MIHOMO_MS_MIRROR`：GitHub 加速前缀，作用于脚本包、核心、Geo 数据等 GitHub 下载。
+- `MHS_REPO`：脚本代码仓库地址（默认 `https://github.com/AS250103/mhs`）。
+- `MHS_MIRROR`：GitHub 加速前缀，作用于脚本包、核心、Geo 数据等 GitHub 下载。
 
 ## 卸载
 

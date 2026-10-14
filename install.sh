@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# mihomo 一键安装脚本
+# mhs — mihomo 一键安装脚本
 #
 # 本地安装:
 #   bash install.sh
 #
 # 远程安装:
-#   curl -fsSL https://raw.githubusercontent.com/AS250103/mihomo-ms/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/AS250103/mhs/main/install.sh | bash
 #
 # 环境变量:
-#   MIHOMO_MS_REPO    脚本代码仓库地址
-#   MIHOMO_MS_MIRROR  GitHub 加速前缀 (同时用于脚本包和核心等下载)
+#   MHS_REPO    脚本代码仓库地址
+#   MHS_MIRROR  GitHub 加速前缀 (同时用于脚本包和核心等下载)
 
-repo_url=${MIHOMO_MS_REPO:-https://github.com/AS250103/mihomo-ms}
-mirror=${MIHOMO_MS_MIRROR:-}
+repo_url=${MHS_REPO:-https://github.com/AS250103/mhs}
+mirror=${MHS_MIRROR:-}
 target=/etc/mihomo/sh
 
 if [[ $(id -u) != 0 ]]; then
@@ -110,7 +110,7 @@ else
     done
     if [[ ! $ok ]]; then
         rm -rf "$tmp"
-        echo "下载失败, 请检查仓库地址或网络 (可用 MIHOMO_MS_REPO / MIHOMO_MS_MIRROR 调整)"
+        echo "下载失败, 请检查仓库地址或网络 (可用 MHS_REPO / MHS_MIRROR 调整)"
         exit 1
     fi
 
